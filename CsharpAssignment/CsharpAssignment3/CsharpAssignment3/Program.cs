@@ -13,24 +13,7 @@ namespace Assignment3
         {
             string input1 = Console.ReadLine();
             string input2 = Console.ReadLine();
-            int alphabetCountInInput1=0;
-            for(int i=0;i<input1.Length;i++)
-            {
-                if(input1[i]>=65&&input1[i]<=122)
-                {
-                    alphabetCountInInput1=1;
-                    break;
-                }
-            }
-            int alphabetCountInInput=0;
-            for(int i=0;i<input2.Length;i++)
-            {
-                if(input2[i]>=65&&input2[i]<=122)
-                {
-                    alphabetCountInInput2=1;
-                    break;
-                }
-            }
+            int checkInput=
             if(alphabetcount==1)
             {
                 Console.WriteLine("string contains alphabets give correct input");
