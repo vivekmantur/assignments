@@ -12,10 +12,24 @@ namespace Assignment2
         public static void Main()
         {
             string string1 = Console.ReadLine();
-
-            AdjacentProduct object1 = new AdjacentProduct();
+       int alphabetcount=0;
+       for(int i=0;i<string1.Length;i++)
+       {
+           if(string1[i]>=65&&string1[i]<=122)
+           {
+               alphabetcount=1;
+               break;
+           }
+       }
+       if(alphabetcount==1)
+       {
+           Console.WriteLine("string contains alphabets give correct input");
+       }
+       else
+       {
+           AdjacentProduct object1 = new AdjacentProduct();
             int greatestproduct = object1.Product(string1);
             Console.WriteLine("{0}", greatestproduct);
-        }
+       }
     }
 }
