@@ -215,5 +215,40 @@ namespace Assignment3
             float finalFloatResult = finalint + finalfloat;
             return finalFloatResult;
         }
+        /// <summary>
+        /// this method will check if user is providing wrong input like string
+        /// </summary>
+        /// <param name="input1">user input1</param>
+        /// <param name="input2">user input2</param>
+        /// <returns>integer value</returns>
+        public static int CheckInput(string input1,string input2)
+        {
+            int alphabetCountInInput1=0;
+            for(int i=0;i<input1.Length;i++)
+            {
+                if(input1[i]>=65&&input1[i]<=122)
+                {
+                    alphabetCountInInput1=1;
+                    break;
+                }
+            }
+            int alphabetCountInInput=0;
+            for(int i=0;i<input2.Length;i++)
+            {
+                if(input2[i]>=65&&input2[i]<=122)
+                {
+                    alphabetCountInInput2=1;
+                    break;
+                }
+            }
+            if(alphabetCountInInput1==1 || alphabetCountInInput2==1)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }
