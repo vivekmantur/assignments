@@ -13,21 +13,20 @@ namespace Assignment2
         /// <returns>greatest product integer value</returns>
         public int Product(string string1)
         {
-            int minimum = 0, minimumindex = -1;
+            int maximum = 0;
             for (int i = 0; i < string1.Length - 4; i++)
             {
-                int k = (int)string1[i] - '0';
-                int k2 = (int)string1[i + 1] - '0';
-                int k3 = (int)string1[i + 2] - '0';
-                int k4 = (int)string1[i + 3] - '0';
-                int product = k * k2 * k3 * k4;
-                if (minimum < product)
+                int firstIndex = (int)string1[i] - '0';
+                int secondIndex = (int)string1[i + 1] - '0';
+                int thirdIndex = (int)string1[i + 2] - '0';
+                int fourthIndex = (int)string1[i + 3] - '0';
+                int product = firstIndex * secondIndex * thirdIndex * fourthIndex;
+                if (maximum< product)
                 {
-                    minimum = product;
-                    minimumindex = i;
+                    maximum = product;
                 }
             }
-            return minimum;
+            return maximum;
         }
     }
 }
