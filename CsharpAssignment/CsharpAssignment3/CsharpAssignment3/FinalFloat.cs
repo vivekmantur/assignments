@@ -9,8 +9,8 @@ namespace Assignment3
         /// <summary>
         /// This method will convert binary value to integer
         /// </summary>
-        /// <param name="stringInput">string input which contains integer part of original string</param>
-        /// <returns>string which contains binary value of integer part</returns>
+        /// <param name="stringInput">string input which contains binary value</param>
+        /// <returns>integer converted value</returns>
         public static int BinaryToInteger(string stringInput)
         {
             int decimalValue = 0;
@@ -47,7 +47,7 @@ namespace Assignment3
         /// <summary>
         /// This method which converts binary value to float
         /// </summary>
-        /// <param name="stringInput"></param>
+        /// <param name="stringInput">string input which contain binary value of float part</param>
         /// <returns>float value</returns>
         public static float BinaryToFloat(string stringInput)
         {
@@ -64,9 +64,9 @@ namespace Assignment3
         /// <summary>
         /// This methods perform binary addition value of two binary values
         /// </summary>
-        /// <param name="firstBinaryString"></param>
-        /// <param name="secondBinaryString"></param>
-        /// <returns>binary value after addition</returns>
+        /// <param name="firstBinaryString">first input binary value</param>
+        /// <param name="secondBinaryString">second input binary value</param>
+        /// <returns>string binary value after addition</returns>
         public static string BinaryAddition(string firstBinaryString, string secondBinaryString)
         {
             int i = firstBinaryString.Length - 1;
@@ -90,7 +90,7 @@ namespace Assignment3
         /// <summary>
         /// this method convert integer to binary value
         /// </summary>
-        /// <param name="input"></param>
+        /// <param name="input">input integer value</param>
         /// <returns>binary value of int</returns>
 
         public static string IntegerToBinary(int input)
@@ -107,7 +107,7 @@ namespace Assignment3
         /// <summary>
         /// This method will reverse a string
         /// </summary>
-        /// <param name="input"></param>
+        /// <param name="input">input string</param>
         /// <returns>reversed string</returns>
         public static string StringReverse(string input)
         {
@@ -118,6 +118,12 @@ namespace Assignment3
             }
             return reversedString;
         }
+         /// <summary>
+        /// This method will add zeros before string to make a proper binary addition
+        /// </summary>
+        /// <param name="input">input string</param>
+        /// <param name="length">length to add zeros</param>
+        /// <returns>updated string with equal leading values</returns>
         public static string PadZeros(string input, int length)
         {
 
@@ -156,7 +162,7 @@ namespace Assignment3
         /// </summary>
         /// <param name="m">user input1</param>
         /// <param name="n">user input2</param>
-        /// <returns></returns>
+        /// <returns>final float value</returns>
         public static float ConvertFloat(float m, float n)
         {
             string string1 = m.ToString();
@@ -165,29 +171,29 @@ namespace Assignment3
             string[] splitString1 = string1.Split('.');
             int input1Int= Convert.ToInt32(splitString1[0]);
             float input1Float = float.Parse("0." + splitString1[1]);
-            string sp1 = IntegerToBinary(input1Int);
-            string sp2 = FloatToBinary(input1Float);
-            string sp = sp1 + "." + sp2;
+            string binaryIntInput1 = IntegerToBinary(input1Int);
+            string binaryFloatInput1 = FloatToBinary(input1Float);
+            string binaryInput1 = binaryIntInput1 + "." + binaryFloatInput1;
             //cnverting n to binary
             string[] splitString2 = string2.Split('.');
             int input2Int = Convert.ToInt32(splitString2[0]);
             float input2Float = float.Parse("0." + splitString2[1]);
-            string sk1 = IntegerToBinary(input2Int);
-            string sk2 = FloatToBinary(input2Float);
-            string sk = sk1 + "." + sk2;
+            string binartIntInput2 = IntegerToBinary(input2Int);
+            string binaryFloatInput2= FloatToBinary(input2Float);
+            string binaryInput2 = binaryIntInput2 + "." + binaryFloatInput2;
             //making the fraction part zero equal 
-            int maxLength = Math.Max(sp2.Length, sk2.Length);
-            sp2 = sp2.PadRight(maxLength, '0');
-            sk2 = sk2.PadRight(maxLength, '0');
-            sp = sp1 + "." + sp2;
-            sk = sk1 + "." + sk2;
-            char ch = '.';
-            string spr = sp.Replace(ch.ToString(), "");
-            string skr = sk.Replace(ch.ToString(), "");
-            maxLength = Math.Max(sp1.Length + sp2.Length, sk1.Length + sk2.Length);
-            string paddedSp2 = PadZeros(spr, maxLength);
-            string paddedSk2 = PadZeros(skr, maxLength);
-            string binaryAddedValue= BinaryAddition(paddedSp2, paddedSk2);
+            int maxLength = Math.Max(s.Length, sk2.Length);
+            binaryFloatInput1 = binaryFloatInput1.PadRight(maxLength, '0');
+            binaryFloatInput2 = binaryFloatInput2.PadRight(maxLength, '0');
+            binaryInput1 = binaryIntInput1 + "." + binaryFloatInput1;
+            binaryInput2= binaryIntInput2 + "." + binaryFloatInput2;
+            char dotIndex = '.';
+            string binaryinputM = sp.Replace(ch.ToString(), "");
+            string binaryinputN = sk.Replace(ch.ToString(), "");
+            maxLength = Math.Max(binaryIntInput1.Length + binaryFloatInput1.Length, binaryIntInput2.Length + binaryFloatInput2.Length);
+            string paddedInput1 = PadZeros(binaryinputM, maxLength);
+            string paddedInput2 = PadZeros(binaryinputN, maxLength);
+            string binaryAddedValue= BinaryAddition(paddedInput1, paddedInput2);
 
             int decimalPoint=GetMaxFractionalPartdigits(string1,string2);
 
