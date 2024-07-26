@@ -188,8 +188,8 @@ namespace Assignment3
             binaryInput1 = binaryIntInput1 + "." + binaryFloatInput1;
             binaryInput2= binaryIntInput2 + "." + binaryFloatInput2;
             char dotIndex = '.';
-            string binaryinputM = sp.Replace(ch.ToString(), "");
-            string binaryinputN = sk.Replace(ch.ToString(), "");
+            string binaryinputM = binaryInput1.Replace(ch.ToString(), "");
+            string binaryinputN = binaryInput2.Replace(ch.ToString(), "");
             maxLength = Math.Max(binaryIntInput1.Length + binaryFloatInput1.Length, binaryIntInput2.Length + binaryFloatInput2.Length);
             string paddedInput1 = PadZeros(binaryinputM, maxLength);
             string paddedInput2 = PadZeros(binaryinputN, maxLength);
