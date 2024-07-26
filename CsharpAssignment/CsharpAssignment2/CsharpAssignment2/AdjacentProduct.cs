@@ -9,8 +9,8 @@ namespace Assignment2
         /// <summary>
         /// This method will calculate the maximum product of four adjacent digits in a input string1
         /// </summary>
-        /// <param name="string1">User input</param>
-        /// <returns></returns>
+        /// <param name="string1">User input string</param>
+        /// <returns>greatest product integer value</returns>
         public int Product(string string1)
         {
             int minimum = 0, minimumindex = -1;
