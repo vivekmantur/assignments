@@ -12,27 +12,27 @@ namespace Assignment1
         /// <param name="originalstring">first string input</param>
         /// <param name="substring">input2 substring</param>
         /// <returns>count of number of occurences of substring in a first string</returns>
-        public int GetCountOfSubstring(string originalstring, string substring)
+        public int GetCountOfSubstring(string originalString, string substring)
         {
-            int count_of_substring = 0;
-            int length1 = originalstring.Length;
+            int countOfSubstring = 0;
+            int length1 = originalString.Length;
             int length2 = substring.Length;
             for (int i = 0; i < length1 - length2; i++)
             {
                 int j = i;
-                string finalstring = "";
+                string finalString = "";
                 for (int k = j; k < i + length2; k++)
                 {
-                    finalstring = finalstring + originalstring[k];
+                    finalString = finalString + originalString[k];
                 }
-                if (finalstring == substring)
+                if (finalString == substring)
                 {
                     Console.Write("{0} ", i);
-                    count_of_substring++;
+                    countOfSubstring++;
                 }
 
             }
-            return count_of_substring;
+            return countOfSubstring;
         }
     }
 }
