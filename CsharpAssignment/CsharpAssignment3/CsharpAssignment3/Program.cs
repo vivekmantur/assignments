@@ -13,16 +13,19 @@ namespace Assignment3
         {
             string input1 = Console.ReadLine();
             string input2 = Console.ReadLine();
-            int checkInput=
-            if(alphabetcount==1)
+            int checkUserInput=FinalFloat.CheckInput(input1,input2);
+            if(checkUserInput==1)
             {
                 Console.WriteLine("string contains alphabets give correct input");
         
             }
-            float m = float.Parse(input1);
-            float n = float.Parse(input2);
-            float finalFloat = FinalFloat.ConvertFloat(m, n);
-            Console.WriteLine("{0}", finalFloat);
+            else
+            {
+                float m = float.Parse(input1);
+                float n = float.Parse(input2);
+                float finalFloat = FinalFloat.ConvertFloat(m, n);
+                Console.WriteLine("{0}", finalFloat);
+            }
         }
     }
 }
