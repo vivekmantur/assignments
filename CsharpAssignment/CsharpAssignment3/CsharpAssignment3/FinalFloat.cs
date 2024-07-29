@@ -216,7 +216,7 @@ namespace Assignment3
             return finalFloatResult;
         }
         /// <summary>
-        /// this method will check if user is providing wrong input like string
+        /// this method will check if user is providing wrong input like containing alphabet
         /// </summary>
         /// <param name="input1">user input1</param>
         /// <param name="input2">user input2</param>
