@@ -28,5 +28,23 @@ namespace Assignment2
             }
             return maximum;
         }
+         /// <summary>
+         /// This method will check user given input contains alphabets or not
+         /// </summary>
+         /// <param name="input">user input</param>
+         /// <returns>input is valid or not</returns>
+         public int CheckUserInput(string input)
+         {
+             int alphabetCount = 0;
+             for (int i = 0; i < input.Length; i++)
+             {
+                 if (input[i] >= 65 && input[i] <= 122)
+                 {
+                     alphabetCount = 1;
+                     break;
+                 }
+             }
+             return alphabetCount;
+         }
     }
 }
