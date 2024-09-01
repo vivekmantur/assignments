@@ -1,6 +1,9 @@
 ﻿using System;
 namespace AutoMapperDemo
 {
+    /// <summary>
+    /// Acts a main class to perform auto mapper functionality
+    /// </summary>
     class Program
     {
         public static void Main()
