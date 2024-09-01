@@ -3,7 +3,7 @@
 namespace AutoMapperDemo
 {
     /// <summary>
-    /// 
+    /// The second class where object mapping is needed
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <typeparam name="U"></typeparam>
