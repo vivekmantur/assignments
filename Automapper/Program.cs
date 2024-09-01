@@ -17,9 +17,9 @@ namespace AutoMapperDemo
                
             };
             var mapper = MapperConfig<string,int,bool>.InitializeAutomapper();
-            var empDTO1 = mapper.Map<PermenantEmployee<string,int,bool>>(emp);
-            var empDTO2 = mapper.Map<Employee<string,int,bool>, PermenantEmployee<string,int,bool>>(emp);
-            Console.WriteLine("Name: " + empDTO1.Name + ", Salary: " + empDTO1.Sal + ", Address: " + empDTO1.Address + ", Department: " + empDTO1.Department+ "  Passport: "+empDTO1.Passport);
+            var employeeobject = mapper.Map<PermenantEmployee<string,int,bool>>(emp);
+            var permanentemployeeobject = mapper.Map<Employee<string,int,bool>, PermenantEmployee<string,int,bool>>(emp);
+            Console.WriteLine("Name: " + permanentemployeeobject.Name + ", Salary: " + permanentemployeeobject.Sal + ", Address: " + permanentemployeeobject.Address + ", Department: " + permanentemployeeobject.Department+ "  Passport: "+permanentemployeeobject.Passport);
             Console.ReadLine();
         }
     }
